@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppNoactionbar"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffffff">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/infografis"
+            android:layout_height="match_parent"
+            android:elevation="3dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="265dp"
+            android:layout_below="@+id/infografis"
+
+            android:background="#FBF4F4F4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infografis">
+
+            <TextView
+                android:id="@+id/temukan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Temukan tempat terdekat : "
+                android:textColor="#020202"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/makan"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/temukan"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/kost"
+                android:src="@drawable/roti"
+                app:layout_constraintEnd_toStartOf="@id/sakit"
+                app:layout_constraintStart_toEndOf="@+id/kost"
+                app:layout_constraintTop_toBottomOf="@+id/temukan" />
+
+            <TextView
+                android:id="@+id/idmakan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/makan"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@+id/idkost"
+                android:fontFamily="sans-serif-light"
+                android:text="Foods"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/idsakit"
+                app:layout_constraintStart_toEndOf="@+id/idkost"
+                app:layout_constraintTop_toBottomOf="@id/makan" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/sakit"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/temukan"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/makan"
+                android:src="@drawable/obat"
+                app:layout_constraintEnd_toStartOf="@id/belanja"
+                app:layout_constraintStart_toEndOf="@+id/makan"
+                app:layout_constraintTop_toBottomOf="@+id/temukan" />
+
+            <TextView
+                android:id="@+id/idkost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kost"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="38dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Kost"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/idmakan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kost" />
+
+            <TextView
+                android:id="@+id/idsakit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sakit"
+                android:layout_marginStart="33dp"
+                android:layout_toRightOf="@+id/idmakan"
+                android:fontFamily="sans-serif-light"
+                android:text="Health"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/commingsoon"
+                app:layout_constraintStart_toEndOf="@+id/idmakan"
+                app:layout_constraintTop_toBottomOf="@id/sakit" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/kost"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/temukan"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/kostan"
+                app:layout_constraintEnd_toStartOf="@id/makan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temukan" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/belanja"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/temukan"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toRightOf="@+id/sakit"
+                android:src="@drawable/daily"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sakit"
+                app:layout_constraintTop_toBottomOf="@+id/temukan" />
+
+            <TextView
+                android:id="@+id/commingsoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/belanja"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="27dp"
+                android:layout_toRightOf="@+id/idsakit"
+                android:fontFamily="sans-serif-light"
+                android:text=" Market"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/idsakit"
+                app:layout_constraintTop_toBottomOf="@id/belanja" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/pensil"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/idkost"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/pensil"
+                app:layout_constraintEnd_toStartOf="@+id/comming"
+                app:layout_constraintHorizontal_bias="0.026"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idkost" />
+
+            <TextView
+                android:id="@+id/idpensil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/belanja"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="1dp"
+                android:layout_toRightOf="@+id/idsakit"
+                android:fontFamily="sans-serif-light"
+                android:text="Stationary"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pensil" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/comming"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/idkost"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="200dp"
+                android:src="@drawable/comming"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/pensil"
+                app:layout_constraintTop_toBottomOf="@+id/idmakan" />
+
+            <TextView
+                android:id="@+id/idcomming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/belanja"
+                android:layout_marginStart="35dp"
+                android:layout_toRightOf="@+id/idsakit"
+                android:fontFamily="sans-serif-light"
+                android:text=" Comming \n     Soon"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/idpensil"
+                app:layout_constraintTop_toBottomOf="@+id/comming" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--
+      <TextView
+          android:id="@+id/sekitar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/frame"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginEnd="16dp"
+          android:fontFamily="@font/open_sans"
+          android:text="Nearby You"
+          android:textColor="#000000"
+          android:textSize="18sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/frame"
+          app:layout_constraintVertical_bias="0.0" /> -->
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

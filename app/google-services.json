@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "879471787041",
+    "firebase_url": "https://infografissalatiga.firebaseio.com",
+    "project_id": "infografissalatiga",
+    "storage_bucket": "infografissalatiga.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879471787041:android:7063cdc6eb64298743f760",
+        "android_client_info": {
+          "package_name": "com.dafloe.infografissalatiga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879471787041-o7a3fouj1dt0kvhome0gdo4ce5mnnet6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dafloe.infografissalatiga",
+            "certificate_hash": "84e1f6e88fe9ca9b42b9b2197db18183836b86d5"
+          }
+        },
+        {
+          "client_id": "879471787041-nplepikepqtu5ld686dg6e8as07md2o6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhzfyONhF3jqygneJiZdMHCApljeaweb8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879471787041-nplepikepqtu5ld686dg6e8as07md2o6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

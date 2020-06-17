@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/viewpager"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabDots"
+        android:layout_width="10dp"
+        android:layout_height="5dp"
+
+        app:tabBackground="@drawable/tab_selector"
+        app:tabGravity="center"
+        app:tabMode="fixed"
+        app:tabPaddingStart="30dp"
+        app:tabPaddingEnd="30dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/viewpager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tabIndicatorHeight="0dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewpager">
+
+        <TextView
+            android:id="@+id/nama_kost_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Wisma Zobo"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gender_kost_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="(Kost Putra)"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/nama_kost_detail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/img_lokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:src="@drawable/loc"
+            app:layout_constraintEnd_toStartOf="@+id/idalamat"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/idalamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Jl. Diponegoro No.83, Salatiga"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageview_telp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            app:layout_constraintEnd_toStartOf="@+id/idnohp"
+            android:src="@drawable/telp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/idnohp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="73dp"
+            android:fontFamily="@font/open_sans"
+            android:text="+62 852 - 2345 - 4456"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/idnamapemilik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="73dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="(Angga)"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@+id/idnohp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageview_duit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/idharga"
+            android:src="@drawable/duit"
+            android:layout_marginTop="89dp"
+            app:layout_constraintTop_toTopOf="parent"
+           />
+
+
+        <TextView
+            android:id="@+id/idharga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="95dp"
+            android:fontFamily="@font/open_sans"
+            android:text="600.000/bulan"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="10dp"
+        android:background="#DADADA"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_nama" />
+
+
+    <TextView
+        android:id="@+id/idfasilitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Fasilitas : "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+    <ImageView
+        android:id="@+id/imageView_kasur"
+        android:layout_width="31dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/bed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idfasilitas" />
+
+    <TextView
+        android:id="@+id/idkasur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="53dp"
+        android:text="Tidak disediakan"
+        android:autoSizeTextType="uniform"
+        android:textColor="#FB1B1B"
+        app:layout_constraintStart_toEndOf="@+id/imageView_kasur"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+    <ImageView
+        android:id="@+id/imageView_wifi"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/wifi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_kasur" />
+
+    <TextView
+        android:id="@+id/idwifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="90dp"
+        android:text="Tersedia"
+        android:autoSizeTextType="uniform"
+        android:textColor="#4CAF50"
+        app:layout_constraintStart_toEndOf="@+id/imageView_wifi"
+        app:layout_constraintTop_toBottomOf="@id/view"  />
+
+
+    <ImageView
+        android:id="@+id/imageView_meja"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/desk"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_wifi" />
+
+    <TextView
+        android:id="@+id/idmeja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="129dp"
+        android:text="Tersedia"
+        android:textColor="#4CAF50"
+        app:layout_constraintStart_toEndOf="@+id/imageView_meja"
+        app:layout_constraintTop_toBottomOf="@id/view"  />
+
+
+    <ImageView
+        android:id="@+id/imageView_lemari"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/closet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_meja" />
+
+    <TextView
+        android:id="@+id/idlemari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="167dp"
+        android:text="Tersedia"
+        android:src="@drawable/closet"
+        android:autoSizeTextType="uniform"
+        android:textColor="#4CAF50"
+        app:layout_constraintStart_toEndOf="@+id/imageView_lemari"
+        app:layout_constraintTop_toBottomOf="@id/view"  />
+
+
+    <ImageView
+        android:id="@+id/imageView_mandi"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/bath"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_lemari" />
+
+    <TextView
+        android:id="@+id/idmandi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="205dp"
+        android:text="Kamar mandi luar"
+        android:textColor="#000000"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/imageView_mandi"
+        app:layout_constraintTop_toBottomOf="@id/view"  />
+
+
+    <TextView
+        android:id="@+id/idlain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Lain - lain : "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_mandi" />
+
+
+    <TextView
+        android:id="@+id/idlaintext"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+       android:layout_marginStart="15dp"
+        android:layout_marginTop="0dp"
+        android:text="Pembayaran pertama kali dilakukan sebesar 600.000 x3 bulan, Meja yang disediakan adalah meja kecil, wifi dibayar terpisah dengan iuran sebesar 40 ribu perbulan."
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idlain" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

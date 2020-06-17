@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">InfografisSalatiga</string>
+
+    <string-array name="gender">
+        <item>Putra</item>
+        <item>Putri</item>
+    </string-array>
+
+    <string-array name="kamarmandi">
+        <item>Dalam</item>
+        <item>Luar</item>
+    </string-array>
+
+    <string-array name="harga">
+        <item> - </item>
+        <item>Terendah - Tertinggi</item>
+        <item>Tertinggi - Terendah</item>
+    </string-array>
+</resources>

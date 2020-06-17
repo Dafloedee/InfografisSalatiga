@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_filter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Kost.Filter_Kost">
+
+    <TextView
+        android:id="@+id/idfilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Filter Hasil Pencarian : "
+        android:textColor="#03A9F4"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#DADADA"
+        app:layout_constraintTop_toBottomOf="@+id/idfilter" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/idgender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Tipe kost : "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:spinnerMode="dropdown"
+                android:entries="@array/gender"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/idgender"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+<!--
+            <TextView
+                android:id="@+id/idrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Range biaya kost : "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/idgender" />
+
+            <EditText
+                android:id="@+id/edit_range_min"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Rp.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idrange" />
+
+            <TextView
+                android:id="@+id/idsampai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/open_sans"
+                android:text="-"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@+id/edit_range_min"
+                app:layout_constraintTop_toBottomOf="@+id/idrange" />
+
+
+            <EditText
+                android:id="@+id/edit_range_max"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Rp.3.000.000"
+                app:layout_constraintStart_toEndOf="@id/idsampai"
+                app:layout_constraintTop_toBottomOf="@+id/idrange" /> -->
+
+            <TextView
+                android:id="@+id/idfasilitasfilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Fasilitas : "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                 android:id="@+id/check_kasur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idfasilitasfilter" />
+
+            <TextView
+                android:id="@+id/idkasurfilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Kasur"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/check_kasur"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_Wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check_kasur" />
+
+            <TextView
+                android:id="@+id/idwififilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="138dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Wifi / Internet"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/check_Wifi"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_meja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check_Wifi" />
+
+            <TextView
+                android:id="@+id/idmejafilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="175dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Meja belajar"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/check_meja"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_lemari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check_meja" />
+
+            <TextView
+                android:id="@+id/idlemarifilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="211dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Lemari pakaian"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/check_lemari"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/idmandifilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="53dp"
+                android:layout_marginTop="248dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Kamar mandi : "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner_mandi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:spinnerMode="dropdown"
+                android:entries="@array/kamarmandi"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/open_sans_light"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/idmandifilter"
+                app:layout_constraintTop_toBottomOf="@id/idlemarifilter"
+                />
+
+
+            <TextView
+                android:id="@+id/idurutanfilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Urutkan bedasar harga : "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idmandifilter" />
+
+            <Spinner
+                android:id="@+id/spinner_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:spinnerMode="dropdown"
+                android:entries="@array/harga"
+                android:fontFamily="@font/open_sans_light"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/idurutanfilter"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+    android:id="@+id/tambahfilter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="16dp"
+    android:fontFamily="@font/open_sans"
+    android:text="Tambah"
+    android:textColor="#2196F3"
+    android:textSize="18sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/batalfilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Batal"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tambahfilter" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
